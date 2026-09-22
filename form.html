@@ -5,198 +5,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Registration Portal</title>
 
-
+```
 <style>
-    table, th, td {
-        border: 1px solid black;
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f2f4f7;
+        color: #222;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 900px;
+        margin: 30px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px #ccc;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    h2, h3 {
+        color: #333;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #ddd;
+        margin: 25px 0;
+    }
+
+    .profile {
+        text-align: center;
+    }
+
+    .profile img {
+        width: 200px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+
+    .form-section {
+        margin-bottom: 20px;
+    }
+
+    label {
+        margin-right: 8px;
+    }
+
+    input, select, textarea {
+        padding: 8px;
+        margin: 5px 0;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="date"] {
+        width: 250px;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 500px;
+        height: 90px;
+    }
+
+    button {
+        padding: 9px 20px;
+        margin-right: 8px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background: #333;
+        color: white;
+    }
+
+    button:hover {
+        background: #555;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    th, td {
+        border: 1px solid #aaa;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background: #eee;
     }
 </style>
-
+```
 
 </head>
 
 <body>
 
+```
+<div class="container">
 
-<h1>Student Registration portal</h1>
-<p>Welcome to SRM Institute of Science And Technology. Please fill the forn below</p>
-<hr>
+    <h1>Student Registration Portal</h1>
 
-<h3>Student Profile</h3>
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2rgEBL1FjFn6TYclGqveFIxyFJB98yhnF2gvFXOWzNacOZ3yc3XR2ovvSJckUo8JAiYxE7_3f6SxEessO1ucwanukfXCii1h-wQMuORI&s=10"
-    width="200">
-
-<hr>
-
-<h3>Student Registration Form</h3>
-
-<form>
-
-    <label>Full Name</label>
-    <input type="text"><br><br>
-
-    <label>Email</label>
-    <input type="email"><br><br>
-
-    <label>Password</label>
-    <input type="password"><br><br>
-
-    <label>Phone Number</label>
-    <input type="tel"><br><br>
-
-    <label>Date Of Birth</label>
-    <input type="date"><br><br>
+    <p>Welcome to SRM Institute of Science And Technology. Please fill the forn below</p>
 
     <hr>
 
-    <h3>GENDER</h3>
+    <div class="profile">
+        <h3>Student Profile</h3>
 
-    <label>Male <input name="gender" type="radio"></label>
-    <label>Female <input name="gender" type="radio"></label>
-    <label>Other <input name="gender" type="radio"></label>
+        <label>Profile Image</label>
+        <input type="file" accept="image/*">
+        <br><br>
 
-    <hr>
-
-    <h3>Skills</h3>
-
-    <label>HTML <input type="checkbox"></label>
-    <label>CSS <input type="checkbox"></label>
-    <label>JAVA SCRIPT <input type="checkbox"></label>
-    <label>REACT <input type="checkbox"></label>
-
-    <br><br>
-
-    <label>Select Course:</label>
-    <select>
-        <option>--Select Course--</option>
-        <option>BTECH</option>
-        <option>MBA</option>
-        <option>BBA</option>
-        <option>BSC</option>
-    </select>
-
-    <p>Preffered Learning Mode:</p>
-
-    <input type="radio" name="mode"> <label>Online</label>
-    <input type="radio" name="mode"> <label>Offline</label>
+    </div>
 
     <hr>
 
-    <label>Highest Qualification:</label>
-    <select>
-        <option>--Select Qualification--</option>
-        <option>12th</option>
-        <option>10th</option>
-        <option>graduated</option>
-    </select>
+    <h3>Student Registration Form</h3>
 
-    <br><br>
+    <form>
 
-    <label>City</label>
-    <select>
-        <option>--Select City--</option>
-        <option>Ghaziabad</option>
-        <option>Delhi</option>
-        <option>Meerut</option>
-        <option>Modinagar</option>
-    </select>
+        <div class="form-section">
 
-    <br><br>
+            <label>Full Name</label>
+            <input type="text"><br>
 
-    <label>Address:</label><br>
-    <textarea placeholder="Enter Your Complete Address"></textarea>
+            <label>Email</label>
+            <input type="email"><br>
 
-    <br><br>
+            <label>Password</label>
+            <input type="password"><br>
 
-    <button>Register</button>
-    <button>Reset</button>
+            <label>Phone Number</label>
+            <input type="tel"><br>
 
-    <hr>
+            <label>Date Of Birth</label>
+            <input type="date">
 
-    <h2>Course Details</h2>
+        </div>
 
-    <table>
-        <tr>
-            <th>Course</th>
-            <th>Duration</th>
-            <th>Fees</th>
-        </tr>
-        <tr>
-            <td>B.tech</td>
-            <td>4 years</td>
-            <td>300k</td>
-        </tr>
-        <tr>
-            <td>BCA</td>
-            <td>3 years</td>
-            <td>200k</td>
-        </tr>
-        <tr>
-            <td>BBA</td>
-            <td>3 years</td>
-            <td>150k</td>
-        </tr>
-    </table>
+        <hr>
 
-    <hr>
+        <div class="form-section">
 
-    <h2>Class Schedule</h2>
+            <h3>GENDER</h3>
 
-    <table>
-        <tr>
-            <th>Course</th>
-            <th>Days</th>
-            <th>Time</th>
-        </tr>
-        <tr>
-            <td>B.tech</td>
-            <td>Mon-Fri</td>
-            <td>9am-5pm</td>
-        </tr>
-        <tr>
-            <td>BCA</td>
-            <td>Mon-Fri</td>
-            <td>10am-4pm</td>
-        </tr>
-        <tr>
-            <td>BBA</td>
-            <td>Mon-Fri</td>
-            <td>11am-3pm</td>
-        </tr>
-    </table>
+            <label>Male
+                <input name="gender" type="radio">
+            </label>
 
-    <hr>
+            <label>Female
+                <input name="gender" type="radio">
+            </label>
 
-    <h2>Student Performance</h2>
+            <label>Other
+                <input name="gender" type="radio">
+            </label>
 
-    <table>
-        <tr>
-            <th>Student Name</th>
-            <th>Course</th>
-            <th>Marks</th>
-        </tr>
-        <tr>
-            <td>John Doe</td>
-            <td>B.tech</td>
-            <td>85%</td>
-        </tr>
-        <tr>
-            <td>Jane Smith</td>
-            <td>BCA</td>
-            <td>90%</td>
-        </tr>
-        <tr>
-            <td>Mike Johnson</td>
-            <td>BBA</td>
-            <td>80%</td>
-        </tr>
-    </table>
+        </div>
 
-</form>
+        <hr>
 
+        <div class="form-section">
+
+            <h3>Skills</h3>
+
+            <label>HTML <input type="checkbox"></label>
+            <label>CSS <input type="checkbox"></label>
+            <label>JAVA SCRIPT <input type="checkbox"></label>
+            <label>REACT <input type="checkbox"></label>
+
+            <br><br>
+
+            <label>Select Course:</label>
+
+            <select>
+                <option>--Select Course--</option>
+                <option>BTECH</option>
+                <option>MBA</option>
+                <option>BBA</option>
+                <option>BSC</option>
+            </select>
+
+        </div>
+
+        <div class="form-section">
+
+            <p>Preffered Learning Mode:</p>
+
+            <input type="radio" name="mode">
+            <label>Online</label>
+
+            <input type="radio" name="mode">
+            <label>Offline</label>
+
+        </div>
+
+        <hr>
+
+        <div class="form-section">
+
+            <label>Highest Qualification:</label>
+
+            <select>
+                <option>--Select Qualification--</option>
+                <option>12th</option>
+                <option>10th</option>
+                <option>graduated</option>
+            </select>
+
+            <br><br>
+
+            <label>City</label>
+
+            <select>
+                <option>--Select City--</option>
+                <option>Ghaziabad</option>
+                <option>Delhi</option>
+                <option>Meerut</option>
+                <option>Modinagar</option>
+            </select>
+
+            <br><br>
+
+            <label>Address:</label><br>
+
+            <textarea placeholder="Enter Your Complete Address"></textarea>
+
+            <br><br>
+
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+
+        </div>
+
+        <hr>
+
+        <h2>Course Details</h2>
+
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Duration</th>
+                <th>Fees</th>
+            </tr>
+            <tr>
+                <td>B.tech</td>
+                <td>4 years</td>
+                <td>300k</td>
+            </tr>
+            <tr>
+                <td>BCA</td>
+                <td>3 years</td>
+                <td>200k</td>
+            </tr>
+            <tr>
+                <td>BBA</td>
+                <td>3 years</td>
+                <td>150k</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>Class Schedule</h2>
+
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Days</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td>B.tech</td>
+                <td>Mon-Fri</td>
+                <td>9am-5pm</td>
+            </tr>
+            <tr>
+                <td>BCA</td>
+                <td>Mon-Fri</td>
+                <td>10am-4pm</td>
+            </tr>
+            <tr>
+                <td>BBA</td>
+                <td>Mon-Fri</td>
+                <td>11am-3pm</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>Student Performance</h2>
+
+        <table>
+            <tr>
+                <th>Student Name</th>
+                <th>Course</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>B.tech</td>
+                <td>85%</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>BCA</td>
+                <td>90%</td>
+            </tr>
+            <tr>
+                <td>Mike Johnson</td>
+                <td>BBA</td>
+                <td>80%</td>
+            </tr>
+        </table>
+
+    </form>
+
+</div>
+```
 
 </body>
 </html>
